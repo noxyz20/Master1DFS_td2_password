@@ -8,4 +8,9 @@ class PasswordValidatorTest {
     public void minimalLenghtPasswordTest() {
         assertTrue(PasswordValidator.isValidPwd("asbide"));
     }
+
+    @Test
+    public void passwordAsDigitTest() {
+        assertTrue(PasswordValidator.isValidPwd("as1ide"));
+    }
 }
