@@ -6,6 +6,6 @@ class PasswordValidatorTest {
 
     @Test
     public void minimalLenghtPasswordTest() {
-        assertFalse(PasswordValidator.isValidPwd("abcdfef"));
+        assertTrue(PasswordValidator.isValidPwd("asbide"));
     }
 }
