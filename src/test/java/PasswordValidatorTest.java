@@ -6,31 +6,34 @@ class PasswordValidatorTest {
 
     @Test
     public void minimalLenghtButNoDigitPasswordTest() {
-        assertFalse(PasswordValidator.isValidPwd("asbide"));
+        assertFalse(PasswordValidator.isValidPwdUsr("asbide"));
     }
 
     @Test
     public void passwordAsDigitAndCharButNoMinimalLenght() {
-        assertFalse(PasswordValidator.isValidPwd("a4de"));
+        assertFalse(PasswordValidator.isValidPwdUsr("a4de"));
     }
 
     @Test
     public void passwordAsDigitTest() {
-        assertTrue(PasswordValidator.isValidPwd("as1ide"));
+        assertTrue(PasswordValidator.isValidPwdUsr("as1ide"));
     }
 
     @Test
     public void passwordAsNoDigitTest() {
-        assertFalse(PasswordValidator.isValidPwd("assside"));
+        assertFalse(PasswordValidator.isValidPwdUsr("assside"));
     }
 
     @Test
     public void passwordAsCharTest() {
-        assertTrue(PasswordValidator.isValidPwd("12345d6"));
+        assertTrue(PasswordValidator.isValidPwdUsr("12345d6"));
     }
 
     @Test
     public void passwordAsNoCharTest() {
-        assertFalse(PasswordValidator.isValidPwd("12345856"));
+        assertFalse(PasswordValidator.isValidPwdUsr("12345856"));
     }
+
+    @Test
+    public void passwordAdminTest() { assertTrue(PasswordValidator.isValidPwdAdmin("Jodie33!ko"));}
 }
